@@ -8,7 +8,9 @@ public class ShapeChanger : MonoBehaviour {
     private GameObject _shape;
     [SerializeField]
     private Sprite[] _polygon = new Sprite[6];
+    private int[] _health = new int[] { 0, 1, 2, 3, 4, 5, 6 };
     private int i = 0;
+    private int _condition;
     [SerializeField]
     private GameObject _bullet;
 
@@ -19,6 +21,9 @@ public class ShapeChanger : MonoBehaviour {
             i++;
            GetComponent<SpriteRenderer>().sprite = _polygon[i];
             Destroy(_bullet);
+            _condition = _health[i];
+            if (_condition == 6)
+                Destroy(_shape);
         }
     }
 }
