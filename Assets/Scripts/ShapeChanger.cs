@@ -11,19 +11,42 @@ public class ShapeChanger : MonoBehaviour {
     private int[] _health = new int[] { 0, 1, 2, 3, 4, 5, 6 };
     private int i = 0;
     private int _condition;
-    [SerializeField]
-    private GameObject _bullet;
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if(transform.tag == "Red")
+        if(collision.gameObject.tag == "Green_Bullet")
         {
             i++;
-           GetComponent<SpriteRenderer>().sprite = _polygon[i];
-            Destroy(_bullet);
-            _condition = _health[i];
-            if (_condition == 6)
-                Destroy(_shape);
+                _condition = _health[i];
+                if (_condition == 6)
+                {
+                    Destroy(collision.gameObject);
+                    Destroy(_shape);
+                }
+                
+            else
+                {
+                    GetComponent<SpriteRenderer>().sprite = _polygon[i];
+                    Destroy(collision.gameObject);
+                }
         }
+        if (transform.tag == "Green")
+            if (collision.gameObject.tag == "Red_Bullet")
+            {
+                i++;
+                _condition = _health[i];
+                if (_condition == 6)
+                {
+                    Destroy(collision.gameObject);
+                    Destroy(_shape);
+                }
+                    
+                else
+                {
+                    GetComponent<SpriteRenderer>().sprite = _polygon[i];
+                    Destroy(collision.gameObject);
+                }
+            }
     }
 }

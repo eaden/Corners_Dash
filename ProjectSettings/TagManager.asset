@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Red_Bullet
+  - Green_Bullet
+  - Red
+  - Green
   layers:
   - Default
   - TransparentFX
