@@ -9,4 +9,9 @@ public class Buttonhandler : MonoBehaviour {
     {
         SceneManager.LoadScene("KimsSzene");
     }
+
+    public void endGame()
+    {
+        Application.Quit();
+    }
 }

@@ -6,30 +6,69 @@ public class Movement_Enemy : MonoBehaviour {
 
     public float speed;
     private Rigidbody2D rigid;
+    private int behaviour;
 
-    public float targetTime = 60.0f;
+    private float walkTime = 1.0f;
+    private float stopTime;
+    private float stopTime_init;
+    bool isWalking = false;
+
+    Vector2 enemy_dir_random = Vector2.zero;
 
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody2D>();
-        speed = 5;
+        speed = 3;
+        behaviour = Random.Range(0, 2);
+        stopTime = Random.Range(0, 15)/10f;
+        stopTime_init = stopTime;
+        walkTime = Random.Range(0, 20) / 10f;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+        
 
-
-
-        targetTime -= Time.deltaTime;
-
-        if (targetTime <= 0.0f)
+        if(isWalking)
+            actOnBehaviour(behaviour);
+        else
         {
-            timerEnded();
+            rigid.velocity = Vector2.zero;
+            stopTime -= Time.deltaTime;
+
+            if (stopTime <= 0.0f)
+            {
+                isWalking = true;
+                stopTime = stopTime_init;
+            }
         }
     }
 
-    private void timerEnded()
+    void actOnBehaviour(int behaviour)
     {
+       
+        walkTime -= Time.deltaTime;
+
+        if (walkTime <= 0.0f)
+        {
+            isWalking = false;
+            walkTime = Random.Range(0, 20) / 10f;
+            if (behaviour == 1)
+                enemy_dir_random = new Vector2(Random.Range(0, 21) / 10f - 1, Random.Range(0, 21) / 10f - 1).normalized;
+        }
+
+        
+
+        if (behaviour == 0)
+        {
+            Vector3 enemy_dir = (GameManager.Instance.gameObject.transform.position - gameObject.transform.position).normalized;
+            rigid.velocity = enemy_dir * speed;
+        }
+
+        if (behaviour == 1)
+        {
+            rigid.velocity = enemy_dir_random * speed;
+        }
 
     }
 }
