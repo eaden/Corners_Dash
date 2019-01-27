@@ -1292,8 +1292,8 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: 21.464432, y: 13.523501}
-  - {x: 20.938522, y: 11.645237}
-  - {x: 20.758942, y: -10.969062}
+  - {x: 29.753433, y: 10.5004425}
+  - {x: 29.573837, y: -10.625624}
 --- !u!212 &1135627367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1853,6 +1853,11 @@ Prefab:
         type: 2}
       propertyPath: shootMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114523387367210918, guid: b4641e0493d1e7646849520e71a1faae,
+        type: 2}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4641e0493d1e7646849520e71a1faae, type: 2}
