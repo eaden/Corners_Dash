@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShapeChanger : MonoBehaviour {
 
+    public int startShape = 0;
+
     [SerializeField]
     private GameObject _shape;
     [SerializeField]
@@ -11,6 +13,13 @@ public class ShapeChanger : MonoBehaviour {
     private int[] _health = new int[] { 0, 1, 2, 3, 4, 5, 6 };
     private int i = 0;
     private int _condition;
+
+    private void Start()
+    {
+        i = startShape;
+        _condition = i;
+        GetComponent<SpriteRenderer>().sprite = _polygon[i];
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
