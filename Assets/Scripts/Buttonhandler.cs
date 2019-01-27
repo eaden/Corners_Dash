@@ -10,6 +10,11 @@ public class Buttonhandler : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
+    public void level_select()
+    {
+        SceneManager.LoadScene(6);
+    }
+
     public void endGame()
     {
         Application.Quit();

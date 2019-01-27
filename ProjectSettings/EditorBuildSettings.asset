@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level5_(Hometown).unity
     guid: 11a31fc3d323aa641acd4b7827411436
+  - enabled: 1
+    path: Assets/Scenes/Level_Select.unity
+    guid: f103293b20c03fe4e9d81d6e1414cfb9
   m_configObjects: {}
