@@ -19,4 +19,30 @@ public class Buttonhandler : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void main_menu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void load_city()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void load_airport()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void load_woods()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void load_home()
+    {
+        SceneManager.LoadScene(5);
+    }
+
 }
