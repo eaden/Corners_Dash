@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Aiming_Player : MonoBehaviour {
 
+
+    public int shootMode = 0;
+
     public GameObject bullet;
     private Rigidbody2D rigid;
     private Vector3 shotDirection = Vector3.zero;
@@ -59,7 +62,12 @@ public class Aiming_Player : MonoBehaviour {
             
 
             GameObject current_bullet = Instantiate(bullet, transform.position, Quaternion.Euler(0,0, Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg - 90));
-            current_bullet.GetComponent<Movement_Bullet>().direction_bullet = new Vector2(shootDirection.x, shootDirection.y);
+            if(shootMode == 0)
+                current_bullet.GetComponent<Movement_Bullet>().direction_bullet = new Vector2(shootDirection.x+Random.Range(0,11)/20f-0.25f, shootDirection.y + Random.Range(0, 11) / 20f - 0.25f).normalized;
+            if (shootMode == 1)
+                current_bullet.GetComponent<Movement_Bullet>().direction_bullet = new Vector2(shootDirection.x + Random.Range(0, 11) / 10f - 0.5f, shootDirection.y + Random.Range(0, 11) / 10f - 0.5f).normalized;
+            if (shootMode == 2)
+                current_bullet.GetComponent<Movement_Bullet>().direction_bullet = new Vector2(shootDirection.x + Random.Range(0, 11) / 5f - 1f, shootDirection.y + Random.Range(0, 11) / 5f - 1f).normalized;
 
         }
 

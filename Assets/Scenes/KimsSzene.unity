@@ -113,6 +113,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &490190861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1124829974854024, guid: ee7364a57fe543f48b9060f59fd2e5ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1801569689}
+--- !u!114 &490190862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 490190861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2cc5406cefe978489ba8f7d350aeed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +290,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146112701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.095149, y: 0.7183864, z: 0}
+  m_LocalPosition: {x: -9.095149, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -322,6 +338,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea2f6bc4a0eb0964a9c6fef17d622698, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1771191345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1844661607676114, guid: ea2f6bc4a0eb0964a9c6fef17d622698,
+    type: 2}
+  m_PrefabInternal: {fileID: 1705512150}
+--- !u!114 &1771191346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771191345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e5d9bb3c9f227745b21c6b9a8798d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1001 &1801569689
 Prefab:
   m_ObjectHideFlags: 0

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Movement_Enemy : MonoBehaviour {
 
+    public GameObject bullet;
+
+    public float ENEMYSHOOTSCALE = 0f;
+
     public float speed;
     private Rigidbody2D rigid;
     private int behaviour;
@@ -12,6 +16,8 @@ public class Movement_Enemy : MonoBehaviour {
     private float stopTime;
     private float stopTime_init;
     bool isWalking = false;
+
+    private float shootingTime;
 
     Vector2 enemy_dir_random = Vector2.zero;
 
@@ -23,13 +29,22 @@ public class Movement_Enemy : MonoBehaviour {
         stopTime = Random.Range(0, 15)/10f;
         stopTime_init = stopTime;
         walkTime = Random.Range(0, 20) / 10f;
+
+        shootingTime = Random.Range(5, 15) / 10f;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        
 
-        if(isWalking)
+        shootingTime -= Time.deltaTime;
+        if (shootingTime <= 0.0f)
+        {
+            shootHim(behaviour);
+            shootingTime = Random.Range(5, 15) / 10f;
+        }
+
+
+        if (isWalking)
             actOnBehaviour(behaviour);
         else
         {
@@ -42,6 +57,18 @@ public class Movement_Enemy : MonoBehaviour {
                 stopTime = stopTime_init;
             }
         }
+    }
+
+    void shootHim(int behaviour)
+    {
+        Vector3 shootDirection;
+        shootDirection = (GameManager.Instance.gameObject.transform.position - gameObject.transform.position).normalized;
+
+        GameObject current_bullet = Instantiate(bullet, transform.position, Quaternion.Euler(0, 0, Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg - 90));
+        current_bullet.transform.localScale += new Vector3(ENEMYSHOOTSCALE, ENEMYSHOOTSCALE, ENEMYSHOOTSCALE);
+
+        current_bullet.GetComponent<Movement_Bullet>().direction_bullet = new Vector2(shootDirection.x + Random.Range(0, 11) / 20f - 0.25f, shootDirection.y + Random.Range(0, 11) / 20f - 0.25f).normalized;
+
     }
 
     void actOnBehaviour(int behaviour)
