@@ -6,12 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Menu_Main.unity
     guid: ebd00eb94818dd0468351548424aac8d
   - enabled: 1
-    path: Assets/Scenes/KimsSzene.unity
-    guid: dea81b3920f320f46b88b9870cef2537
+    path: Assets/Scenes/Level1_(Battlefield).unity
+    guid: fa9e3713e544d4049bb4e2cdc6eed44e
+  - enabled: 1
+    path: Assets/Scenes/Level2_(City).unity
+    guid: 1b0bb58864c0e8741b1deebc1a87964a
+  - enabled: 1
+    path: Assets/Scenes/Level3_(Airport).unity
+    guid: 772fe5064e61c0b48ba7a204a6278747
+  - enabled: 1
+    path: Assets/Scenes/Level4_(Woods).unity
+    guid: c444017f2fab6e040bb4333b2d855ffa
+  - enabled: 1
+    path: Assets/Scenes/Level5_(Hometown).unity
+    guid: 11a31fc3d323aa641acd4b7827411436
   m_configObjects: {}

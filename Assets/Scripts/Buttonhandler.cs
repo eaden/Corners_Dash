@@ -7,7 +7,7 @@ public class Buttonhandler : MonoBehaviour {
 
     public void newGame()
     {
-        SceneManager.LoadScene("KimsSzene");
+        SceneManager.LoadScene(1);
     }
 
     public void endGame()
