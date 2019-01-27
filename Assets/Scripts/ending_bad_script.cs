@@ -27,5 +27,9 @@ public class ending_bad_script : MonoBehaviour {
         {
             text.text = "Home.";
         }
+        if (text_time <= 5.0f && GameManager.levellevel>4)
+        {
+            text.text = "You did it. I missed you. Welcome home.";
+        }
     }
 }

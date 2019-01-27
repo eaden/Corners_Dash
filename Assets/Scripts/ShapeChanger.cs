@@ -32,6 +32,7 @@ public class ShapeChanger : MonoBehaviour {
                 if (_condition == 6)
                 {
                     Destroy(collision.gameObject);
+                    GameManager.levellevel = 0;
                     //Destroy(_shape);
                     SceneManager.LoadScene(7);
                 }

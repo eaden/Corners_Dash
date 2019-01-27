@@ -46,7 +46,10 @@ public class ending_move_bad : MonoBehaviour {
             if(shootHimNow)
             {
                 shootHim(behaviour);
-                shootHimNow = false;
+                if (GameManager.levellevel < 5)
+                    shootHimNow = false;
+                else
+                    shootingTime = 0.5f;
             }
             
         }

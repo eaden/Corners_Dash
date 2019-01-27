@@ -21,7 +21,12 @@ public class level_change : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Red")
         {
-            SceneManager.LoadScene(levelToChangeTo);
+            GameManager.levellevel++;
+            if(GameManager.levellevel>4)
+                SceneManager.LoadScene(9);
+            else
+                SceneManager.LoadScene(levelToChangeTo);
+            
             /*
             switch (levelToChangeTo)
             {
