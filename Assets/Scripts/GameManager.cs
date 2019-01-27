@@ -8,11 +8,16 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance { get { return _instance; } }
 
-    
+
+    public static bool firstLevel = false;
+    public static bool secondLevel = false;
+    public static bool thirdLevel = false;
+    public static bool forthLevel = false;
+    public static bool fifthLevel = false;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);

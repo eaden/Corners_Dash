@@ -609,7 +609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ok. Run down here. There got to be a plane somewhere
+  m_Text: Ok. Run down here. There is got to be a plane somewhere
 --- !u!222 &775578590
 CanvasRenderer:
   m_ObjectHideFlags: 0
