@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShapeChanger : MonoBehaviour {
 
@@ -31,7 +32,8 @@ public class ShapeChanger : MonoBehaviour {
                 if (_condition == 6)
                 {
                     Destroy(collision.gameObject);
-                    Destroy(_shape);
+                    //Destroy(_shape);
+                    SceneManager.LoadScene(7);
                 }
                 
             else

@@ -203,6 +203,16 @@ Prefab:
       propertyPath: shootMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114523387367210918, guid: b4641e0493d1e7646849520e71a1faae,
+        type: 2}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114452480812387454, guid: b4641e0493d1e7646849520e71a1faae,
+        type: 2}
+      propertyPath: startShape
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4641e0493d1e7646849520e71a1faae, type: 2}
   m_IsPrefabAsset: 0
@@ -1927,7 +1937,7 @@ Prefab:
     - target: {fileID: 114183947947154908, guid: b6ea525364070014d8c183d076ca1377,
         type: 2}
       propertyPath: levelToChangeTo
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6ea525364070014d8c183d076ca1377, type: 2}
